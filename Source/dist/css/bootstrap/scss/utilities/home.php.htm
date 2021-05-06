@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html data-lt-installed="true"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+      <title></title>
+      <link rel="stylesheet" href="home.php_files/bootstrap.css">
+      <script src="home.php_files/jquery.js"></script>
+      <script src="home.php_files/bootstrap.js"></script>
+      <link href="home.php_files/css.css" rel="stylesheet">
+      <link rel="stylesheet" type="text/css" href="home.php_files/style.css">
+      <link rel="stylesheet" type="text/css" href="home.php_files/font-awesome.css">
+      <link rel="stylesheet" type="text/css" href="home.php_files/font-awesome_002.css">
+      <style type="text/css">
+         .animateuse{
+         animation: leelaanimate 0.5s infinite;
+         }
+         @keyframes leelaanimate{
+         0% { color: red },
+         10% { color: yellow },
+         20%{ color: blue }
+         40% {color: green },
+         50% { color: pink }
+         60% { color: orange },
+         80% {  color: black },
+         100% {  color: brown }
+         }
+      </style>
+   </head>
+   <body>
+
+         <h1 class="text-center text-white font-weight-bold bg-dark">  admin, Exam in progress <a href="http://quizworld/logout.php" class="btn btn-primary m-auto text-white"> Logout </a></h1> 
+         <div class="progressContainer">
+
+         <div class="progress progress0"><div class="progress-bar bg-success" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div></div><div class="progress progress1"><div class="progress-bar bg-success" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div></div><div class="progress progress2"><div class="progress-bar bg-success" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div></div></div>
+         [{"classID":"0","class":"Admin","subj":"Intro,Subject1,Subject2,","subjIDs":"3,4,5,"}]<div class="container">
+         <br>
+            <div class="col-lg-8 d-block m-auto bg-light quizsetting ">
+               <form id="form1" action="check.php" method="post">
+                  <div class="">
+                     <p>  Intro : Introoo </p>
+                     <h2 class=""> <b> Welcome to the mock exam.</b> </h2>
+                     <p class="">  This is a multiple choice test, select the answer you think is right. 
+Do you understand?
+yo
+ww
+coolddddeeeeee2222233333333
+ </p>
+                     <br>
+                     	
+
+
+                  <div class="form-group">
+                  <div class="custom-control custom-radio">
+                     <span class="radioSpan">1</span>
+                  <input type="radio" class="" id="customRadio1" name="q1" value="1">
+                  <label class="custom-control-label2" for="customRadio1">yes2222222</label>
+                  
+                  </div>
+
+                  <div class="custom-control custom-radio">
+                  <span class="radioSpan">2</span>
+                  <input type="radio" class="" id="customRadio2" name="q1" value="2">
+                  <label class="custom-control-label2" for="customRadio2">no2</label>
+                  </div>
+
+                  <div class="custom-control custom-radio">
+                  <span class="radioSpan">3</span>
+                  <input type="radio" class="" id="customRadio3" name="q1" value="3">
+                  <label class="custom-control-label2" for="customRadio3">no</label>
+                  </div>
+
+                  <div class="custom-control custom radio custom-radio2">
+                  <span class="radioSpan">4</span>
+                  <input type="radio" class="" id="customRadio4" name="q1" value="4">
+                  <label class="custom-control-label2" for="customRadio4">no</label>
+                  </div>
+                  <div></div>
+                  </div>
+                  </div>
+
+               </form>
+               <p id="letc"></p>
+            </div>
+            <br>
+      </div>
+      <footer id="footer">
+      <div id="footerDiv">
+      <!-- <h5 class="text-center"> Axy_David</h5>  -->
+      <input type="button" name="skip" value="Skip" class="btn btn-outline-secondary m-auto d-block" style="margin: auto auto auto 0 !important;"> <br>
+      <h2 class="">  1 </h2>
+      <input type="submit" name="submit" value="Check" form="form1" class="btn btn-success m-auto d-block" style="margin: auto 0 auto auto !important;" disabled="disabled"> <br>
+
+      </div>
+      </footer>
+      
+
+      <script>
+         $(function(){
+        $("input[type='radio']").change(function(){
+        $("input[type='submit']").removeAttr("disabled");
+        });
+      });
+         $("input[name='q1']:checked").parent().addClass("selected");
+         $('input[type=radio][name=q1]').change(function() {
+         $("input[name='q1']").parent().removeClass("selected");
+         $("input[name='q1']:checked").parent().addClass("selected");
+         // console.log($("input[name='q1']:checked").val());
+         });
+
+         var classID = "Admin";
+         $.ajax({  method: "POST", url: "classGet.php", data:{ classID:classID }})
+         .fail(function(data) {console.log( "error:"+JSON.stringify(data));})
+         .done(function(data){
+           //echo("getting class subjects... : "+JSON.stringify(data));
+           $(".container").before(data);
+           //console.log(data);
+            var classData = JSON.parse(data);
+            cool2 = classData[0].subj.split(",");
+            cool3 = classData[0].subjIDs.split(",");
+            if (cool2[cool2.length-1] === "") cool2.splice(cool2.length-1, 1);
+            if (cool3[cool3.length-1] === "") cool3.splice(cool3.length-1, 1);
+            var dataString ="";
+            
+            for(var i=0; i<cool2.length; i++) 
+        {
+         dataString += '<div class="progress progress'+i+'"><div class="progress-bar bg-success" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div></div>';
+        }
+        console.log(dataString);
+        $(".progressContainer").append(dataString);
+            
+         })
+
+      </script>
+
+</body></html>
