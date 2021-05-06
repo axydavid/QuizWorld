@@ -27,6 +27,7 @@ There are 2 modes of quizes:
   I also used some JS libraries whenever the html5 standard didn't suid my need suh as: 
   jQuery(overall animation), lightbox(for photos), sortable and tabulator(for selecting and sorting classes and subjects).
   I also used bootstrap to help me standardalize my design, however I also took some inspiration from DLingo.
+  This is my alpha branch which is most recent but also have some experimental code.
 
 Some random pictures of the project:
 ![79374343_458718141499015_8187064559396192256_n](https://user-images.githubusercontent.com/11884779/117349095-996d1380-aedd-11eb-9f12-33af0bd27921.png)
