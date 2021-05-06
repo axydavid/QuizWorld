@@ -1,5 +1,5 @@
 # QuizWorld
-This is a quiz application I made for a university where I live.
+The use case of this app is within a university.
 
 The teacher writes the questions and up to 4 possible answers. 
 They're able compartmentalize the questions into different subject and subject topics.
