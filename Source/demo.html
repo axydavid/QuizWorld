@@ -1,0 +1,21 @@
+<html>
+<head>
+<link href="../dist/css/uploadfile.css" rel="stylesheet">
+<script src="../dist/js/jquery.uploadfile.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+</head>
+<body>
+<div id="fileuploader">Upload</div>
+<script>
+$(document).ready(function() {
+	$("#fileuploader").uploadFile({
+		url:"php/upload.php",
+		multiple:false,
+		dragDrop:false,
+		maxFileCount:1,
+		fileName:"myfile"
+	});
+});
+</script>
+</body>
+</html>
