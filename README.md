@@ -14,6 +14,8 @@ Such data han help the teacher asses the quality of understanding within specifi
 and therefore remedy the problem before it's too late.
 The analytics can be displayed very flexibly allowing easy and intuitive visualizations of results such as a specific class or group but also per individual student
 and also the history up until that point.
+There was also basic analysis for each of the individual students where the algorithm would automatically identify specific topics and/or question that would help
+the student improve their overall performance.
 
 There are 2 modes of quizes:
 - Practice, 
