@@ -23,7 +23,7 @@ There are 2 modes of quizes:
 - Test, 
   where no feedback will be displayed and also there will be a time limit per quiz.
   
-  The application is made of mainly HTML5, css3, JS and SQL.
+  The website is made of mainly HTML5, CSS3 and JS for the frontend and PHP which executes SQL commands on the server for the backend.
   I also used some JS libraries whenever the html5 standard didn't suid my need suh as: 
   jQuery(overall animation), lightbox(for photos), sortable and tabulator(for selecting and sorting classes and subjects).
   I also used bootstrap to help me standardalize my design, however I also took some inspiration from DLingo.
