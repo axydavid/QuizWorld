@@ -26,6 +26,8 @@ There are 2 modes of quizes:
   The application is made of mainly HTML5, css3, JS and SQL.
   I also used some JS libraries whenever the html5 standard didn't suid my need suh as: 
   jQuery(overall animation), lightbox(for photos), sortable and tabulator(for selecting and sorting classes and subjects)
+
+Some random pictures of the project:
 ![79374343_458718141499015_8187064559396192256_n](https://user-images.githubusercontent.com/11884779/117349095-996d1380-aedd-11eb-9f12-33af0bd27921.png)
 ![82110244_2590028921113537_4910338798442774528_n](https://user-images.githubusercontent.com/11884779/117349104-9a9e4080-aedd-11eb-8c1d-fd687ade5d5e.png)
 ![82613320_2365991473507414_325790715558756352_n](https://user-images.githubusercontent.com/11884779/117349111-9bcf6d80-aedd-11eb-845a-eafbf6b6f3db.png)
